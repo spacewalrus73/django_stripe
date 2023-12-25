@@ -13,7 +13,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . /app
 
-ENTRYPOINT ["gunicorn", "core.asgi"]
+ENTRYPOINT ["gunicorn", "dj_stripe.wsgi"]
 
 #FROM python:3.10
 #LABEL authors="spacewalrus"
