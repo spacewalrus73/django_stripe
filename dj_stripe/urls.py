@@ -1,6 +1,6 @@
 from django.urls import path
 from django.contrib import admin
-from product.views import (
+from dj_stripe.product import (
     CreateCheckoutSessionView,
     ProductPageView,
     SuccessPageView,
