@@ -18,5 +18,5 @@ ___
 1. You have to be installed Python (preferably python 3.10) and poetry;
 2. Run the command in terminal: `git clone git@github.com:spacewalrus73/django_stripe.git`  
 _Last command run from the root of project's directory. May not work python3 (usually on Windows), then use_ `python`  
-3. Run `make install`, then `make run` - runs docker container, `make runpy` - runs django server.
+3. Run `make install`, then `make run` - runs docker container if you change commented in Dockerfile, `make runpy` - runs django server.
 
