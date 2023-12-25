@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home page</title>
+</head>
+<body>
+    <h1>Items</h1>
+    {% for item in items %}
+    <ul>
+        <li><a href="{% url 'product_view' item.id %}">{{ item.name }}</a></li>
+    </ul>
+    {% endfor %}
+    <hr />
+    <h1>Orders</h1>
+    {% for order in orders %}
+    <ul>
+        <li><a href="{% url 'order_view' order.id %}">{{ order.id }}</a></li>
+    </ul>
+    {% endfor %}
+</body>
+</html>
