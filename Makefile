@@ -28,3 +28,7 @@ build:
 
 runpy:
 	@$(MANAGE) runserver
+
+.PHONY: install
+install:
+	@poetry install
