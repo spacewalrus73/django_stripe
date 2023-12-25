@@ -4,4 +4,4 @@ dist/
 *.pyc
 .venv/
 .env
-dj_stripe/product
+product
