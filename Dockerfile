@@ -12,6 +12,7 @@ ENV PATH="$VIRTUAL_ENV/bin:$PATH"
 RUN apt-get update
 
 RUN pip install --upgrade pip
+RUN pip install --force-reinstall -U setuptools
 COPY ./requirements.txt /app/
 RUN pip install --no-cache-dir -r requirements.txt
 
