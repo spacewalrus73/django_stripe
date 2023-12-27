@@ -14,17 +14,18 @@ lint:
 port-clean:
 	sudo fuser -k 8000/tcp
 
+.PHONY: build
+build:
+	docker build -t djangostripe .
+
 .PHONY: run
 run:
+	make build
 	docker run -p 8000:8000 djangostripe
 
 .PHONY: shell
 shell:
 	@$(MANAGE) shell_plus --ipython
-
-.PHONY: build
-build:
-	docker build -t djangostripe .
 
 runpy:
 	@$(MANAGE) runserver
