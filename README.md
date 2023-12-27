@@ -22,3 +22,5 @@ _Last command run from the root of project's directory. May not work python3 (us
   
 ## _Service is live now_ - https://test-django-stripe.onrender.com/
 
+Adminpage - `admin` is a login and password.
+
