@@ -1,0 +1,9 @@
+services:
+  -type: web
+  name: dj_stripe
+  runtime: python
+  buildCommand: "./build.sh"
+  StartCommand: "gunicorn dj_stripe.wsgi:application"
+  envVars:
+    - key: WEB_CONCURRENCY
+      value: 4
