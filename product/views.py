@@ -108,21 +108,20 @@ class CreateOrderCheckoutSessionView(View):
             line_items=[
                 {
                     'price_data': {
-                        'currency': order.items.last().currency,
+                        'currency': item.currency,
                         'product_data': {
-                            'name': order.id,
+                            'name': item.name,
                         },
-                        'unit_amount': order.total_amount,
+                        'unit_amount': item.price,
                         'tax_behavior': 'inclusive' if tax.inclusive
                                         else 'unspecified',
                     },
                     'quantity': 1,
                     'tax_rates': [tax.id],
-                }
+                } for item in order.items.all()
             ],
             discounts=[{"coupon": order.discount.id}],
             mode='payment',
-            # automatic_tax={'enabled': True},
             success_url=settings.DOMAIN + '/success/',
             cancel_url=settings.DOMAIN + '/cancel/',
         )
