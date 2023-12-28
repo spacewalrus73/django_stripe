@@ -41,7 +41,7 @@
     const stripe = Stripe("{{ STRIPE_PUBLIC_KEY }}");
 
     // The items the customer wants to buy
-    const items = [{ id: "{{ item }}" }];
+    const items = [{ id: "{{ item.id }}" }];
 
     let elements;
 
